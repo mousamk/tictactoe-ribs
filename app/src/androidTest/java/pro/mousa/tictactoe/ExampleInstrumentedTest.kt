@@ -1,4 +1,4 @@
-package tictactoe.mousa.pro.tictactoe
+package pro.mousa.tictactoe
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

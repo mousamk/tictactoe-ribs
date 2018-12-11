@@ -1,4 +1,4 @@
-package tictactoe.mousa.pro.tictactoe
+package pro.mousa.tictactoe
 
 import org.junit.Test
 
