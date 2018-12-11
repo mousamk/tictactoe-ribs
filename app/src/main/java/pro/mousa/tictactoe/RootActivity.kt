@@ -3,12 +3,20 @@ package pro.mousa.tictactoe
 import android.view.ViewGroup
 import com.uber.rib.core.RibActivity
 import com.uber.rib.core.ViewRouter
+import pro.mousa.tictactoe.root.RootBuilder
+import pro.mousa.tictactoe.root.RootInteractor
 
 
 class RootActivity : RibActivity()
 {
-    override fun createRouter(parentViewGroup: ViewGroup?): ViewRouter<*, *, *>
+    private lateinit var rootInteractor: RootInteractor
+
+
+    override fun createRouter(parentViewGroup: ViewGroup): ViewRouter<*, *, *>
     {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val rootBuilder = RootBuilder(object : RootBuilder.ParentComponent {})
+        val router = rootBuilder.build(parentViewGroup)
+        rootInteractor = router.interactor
+        return router
     }
 }
